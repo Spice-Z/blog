@@ -8,4 +8,4 @@
   日々是関数
 </h1>
 
-[Gatsby's blog starter](https://www.gatsbyjs.org/docs/gatsby-starters/によって作られたブログ。
+[Gatsby's blog starter](https://www.gatsbyjs.org/docs/gatsby-starters/)によって作られたブログ。

@@ -6,14 +6,13 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 
-class BlogPostTemplate extends React.Component {
-  render() {
-    const post = this.props.data.markdownRemark
-    const siteTitle = this.props.data.site.siteMetadata.title
-    const { previous, next } = this.props.pageContext
+const BlogPostTemplate  = props => {
+    const post = props.data.markdownRemark
+    const siteTitle = props.data.site.siteMetadata.title
+    const { previous, next } = props.pageContext
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout location={props.location} title={siteTitle}>
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
@@ -77,7 +76,6 @@ class BlogPostTemplate extends React.Component {
         </nav>
       </Layout>
     )
-  }
 }
 
 export default BlogPostTemplate
