@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `日々是関数`,
+    title: `Spice Picks`,
     author: `Spice-Z`,
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
@@ -57,8 +57,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `日々是関数`,
-        short_name: `日関`,
+        name: `Spice Picks`,
+        short_name: `SPicks`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,

@@ -5,7 +5,7 @@
   </a>
 </p>
 <h1 align="center">
-  日々是関数
+  Spice Picks
 </h1>
 
 [Gatsby's blog starter](https://www.gatsbyjs.org/docs/gatsby-starters/)によって作られたブログ。
