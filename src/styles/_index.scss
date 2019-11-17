@@ -1,0 +1,9 @@
+@import "color";
+
+body {
+  color: $gray;
+}
+
+a {
+  color: $teal-normal !important;
+}

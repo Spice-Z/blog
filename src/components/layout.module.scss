@@ -1,0 +1,11 @@
+@import "./src/styles/color.scss";
+
+body {
+  color: $gray;
+}
+
+.title {
+  color : $primary;
+  text-decoration: none;
+  box-shadow: none;
+}
