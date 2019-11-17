@@ -5,6 +5,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
+import styles from "./blog-post.module.scss"
 
 const BlogPostTemplate = props => {
   const post = props.data.markdownRemark
@@ -17,7 +18,7 @@ const BlogPostTemplate = props => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <article>
+      <article className={styles.mdContent}>
         <header>
           <h1
             style={{

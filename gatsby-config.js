@@ -2,10 +2,10 @@ module.exports = {
   siteMetadata: {
     title: `Spice Picks`,
     author: `Spice-Z`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    description: `東京でエンジニアやってるすぱいすのブログです！`,
+    siteUrl: `https://spice-z.com/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `rabspice`,
     },
   },
   plugins: [
@@ -66,7 +66,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/logo.png`,
       },
     },
     `gatsby-plugin-offline`,
