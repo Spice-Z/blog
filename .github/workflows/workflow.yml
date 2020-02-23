@@ -21,7 +21,7 @@ jobs:
           mkdir -p path/to/artifact
           echo Lighthouse > path/to/artifact/world.txt
           npm install -g @lhci/cli@0.3.x
-          lhci autorun --githubAppToken=LHCI_GITHUB_APP_TOKEN || echo "LHCI failed!"
+          lhci autorun --githubAppToken=LHCI_GITHUB_APP_TOKEN --serverBaseUrl='path/to/artifact/' || echo "LHCI failed!"
       - name: 成果物作ってんよ
         uses: actions/upload-artifact@v1
         with:
