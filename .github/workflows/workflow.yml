@@ -14,13 +14,14 @@ jobs:
         run: |
           npm install
           npm run build
+          npm run serve
       - name: Run lighthouse
         run: |
           npm i -g lighthouse
           lighthouse \
             --chrome-flags="--headless" \
             --output html --output-path ./report.html \
-            './public/index.html'
+            'http://localhost:9000/'
       - name: Upload result
         uses: actions/upload-artifact@master
         with:
