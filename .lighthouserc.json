@@ -1,13 +1,12 @@
 {
   "ci": {
+    "staticDistDir" : "./public",
+    "url" : "http://localhost",
     "assert": {
       "preset": "lighthouse:recommended",
       "assertions": {
         "uses-webp-images": "off"
       }
-    },
-    "upload": {
-      "target": "temporary-public-storage"
     }
   }
 }
