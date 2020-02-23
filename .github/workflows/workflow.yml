@@ -1,19 +1,20 @@
-name: Lighthouse Check
+name: Build project and Run Lighthouse CI
 on: [pull_request]
-
 jobs:
-  lighthouse-check:
+  lhci:
+    name: Lighthouse CI
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - run: mkdir /tmp/artifacts
-    - name: Run Lighthouse
-      uses: foo-software/lighthouse-check-action@master
-      with:
-        outputDirectory: /tmp/artifacts
-        urls: 'https://spice-z.com/'
-    - name: Upload artifacts
-      uses: actions/upload-artifact@master
-      with:
-        name: Lighthouse reports
-        path: /tmp/artifacts
+      - uses: actions/checkout@v1
+      - name: Use Node.js 10.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 10.x
+      - name: npm install, build
+        run: |
+          npm install
+          npm run build
+      - name: run Lighthouse CI
+        run: |
+          npm install -g @lhci/cli@0.3.x
+          lhci autorun --upload.target=temporary-public-storage || echo "LHCI failed!"
