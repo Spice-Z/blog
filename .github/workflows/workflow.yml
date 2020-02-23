@@ -18,12 +18,10 @@ jobs:
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
         run: |
-          mkdir -p path/to/artifact
-          echo Lighthouse > path/to/artifact/world.txt
           npm install -g @lhci/cli@0.3.x
-          lhci autorun --githubAppToken=LHCI_GITHUB_APP_TOKEN --serverBaseUrl='path/to/artifact/' || echo "LHCI failed!"
+          lhci autorun --githubAppToken=LHCI_GITHUB_APP_TOKEN --output html --output-path ./report.html || echo "LHCI failed!"
       - name: 成果物作ってんよ
         uses: actions/upload-artifact@v1
         with:
-          name: my-artifact
-          path: path/to/artifact
+            name: report
+            path: report.html
