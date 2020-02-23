@@ -1,7 +1,9 @@
 {
   "ci": {
-    "staticDistDir" : "./public",
-    "url" : "http://localhost",
+    "collect": {
+      "staticDistDir" : "./public",
+      "url" : "http://localhost/"
+    },
     "assert": {
       "preset": "lighthouse:recommended",
       "assertions": {
