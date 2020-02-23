@@ -4,6 +4,10 @@
       "staticDistDir" : "./public",
       "url" : "http://localhost/"
     },
+    "upload":{
+      "target": "lhci",
+      "serverBaseUrl": "./report/"
+    },
     "assert": {
       "preset": "lighthouse:recommended",
       "assertions": {
