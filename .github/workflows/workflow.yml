@@ -2,18 +2,23 @@ name: Lighthouse Check
 on: [pull_request]
 
 jobs:
-  lighthouse-check:
-    runs-on: ubuntu-latest
+  test:
+    runs-on: ubuntu-18.04
     steps:
-    - uses: actions/checkout@master
-    - run: mkdir /tmp/artifacts
-    - name: Run Lighthouse
-      uses: foo-software/lighthouse-check-action@master
-      with:
-        outputDirectory: /tmp/artifacts
-        urls: 'https://www.foo.software,https://www.foo.software/contact'
-    - name: Upload artifacts
-      uses: actions/upload-artifact@master
-      with:
-        name: Lighthouse reports
-        path: /tmp/artifacts
+      - uses: actions/checkout@v2
+
+      - name: Install lighthouse
+        run: sudo npm i -g lighthouse
+
+      - name: Run lighthouse
+        run: |
+          lighthouse \
+            --chrome-flags="--headless" \
+            --output html --output-path ./report.html \
+            'https:spice-z.com'
+
+      - name: Upload result
+        uses: actions/upload-artifact@master
+        with:
+          name: report
+          path: report.html
