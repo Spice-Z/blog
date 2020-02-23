@@ -16,7 +16,7 @@ jobs:
           npm run build
       - name: Run lighthouse
         run: |
-        npm i -g lighthouse
+          npm i -g lighthouse
           lighthouse \
             --chrome-flags="--headless" \
             --output html --output-path ./report.html \
