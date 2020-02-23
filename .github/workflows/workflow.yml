@@ -10,12 +10,13 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 10.x
-          repo-token: "${{ secrets.LHCI_GITHUB_APP_TOKEN }}"
       - name: npm install, build
         run: |
           npm install
           npm run build
       - name: run Lighthouse CI
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
         run: |
           npm install -g @lhci/cli@0.3.x
           lhci autorun --upload.target=temporary-public-storage || echo "LHCI failed!"
