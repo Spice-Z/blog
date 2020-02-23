@@ -21,8 +21,9 @@ jobs:
           npm install -g @lhci/cli@0.3.x
           lhci autorun --upload.target=temporary-public-storage || echo "LHCI failed!"
       - name: 成果物作ってんよ
-        run: mkdir -p path/to/artifact
-        run: echo hello > path/to/artifact/world.txt
+        run: |
+          mkdir -p path/to/artifact
+          echo hello > path/to/artifact/world.txt
       - uses: actions/upload-artifact@v1
         with:
           name: my-artifact
