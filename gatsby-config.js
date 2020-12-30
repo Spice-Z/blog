@@ -19,7 +19,7 @@ module.exports = {
           google: [
             {
               family: `Noto Sans JP`,
-              variants: ["300", "400", "500", "600"],
+              variants: ["300", "400", "500", "600", "700", "800", "900"],
             },
           ],
         },
