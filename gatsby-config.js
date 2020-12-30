@@ -13,13 +13,16 @@ module.exports = {
       resolve: `gatsby-plugin-sass`,
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-webfonts`,
       options: {
-        fonts: [
-          {
-            family: `Noto Sans JP`,
-          },
-        ],
+        fonts: {
+          google: [
+            {
+              family: `Noto Sans JP`,
+              variants: ["300", "400", "500", "600"],
+            },
+          ],
+        },
       },
     },
     {
